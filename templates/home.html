@@ -1,5 +1,72 @@
-<h1>
-Hello World
-</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Prediction</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+        .container {
+            margin-top: 50px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        input {
+            margin: 10px;
+            padding: 8px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        h2 {
+            color: green;
+        }
+    </style>
+</head>
 
+<body>
 
+    <div class="container">
+        <h1>🏠 House Price Prediction</h1>
+
+        <!-- FORM -->
+        <form action="/predict" method="post">
+
+            <input type="number" name="area" placeholder="Area (sqft)" required><br>
+
+            <input type="number" name="location" placeholder="Location (encoded)" required><br>
+
+            <input type="number" name="bhk" placeholder="BHK" required><br>
+
+            <input type="number" name="bath" placeholder="Bathrooms" required><br>
+
+            <input type="number" name="balcony" placeholder="Balcony" required><br>
+
+            <input type="number" name="parking" placeholder="Parking" required><br>
+
+            <input type="number" name="furnishing" placeholder="Furnishing (encoded)" required><br>
+
+            <input type="number" name="property_type" placeholder="Property Type (encoded)" required><br>
+
+            <input type="number" name="age" placeholder="Age" required><br>
+
+            <br>
+            <button type="submit">Predict Price</button>
+        </form>
+
+        <!-- OUTPUT -->
+        <h2>{{ prediction_text }}</h2>
+
+    </div>
+
+</body>
+</html>
