@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 
 app = Flask(__name__)
-model = joblib.load('../model/xgb_gbr_stacked_model.pkl')
+model = joblib.load('model/xgb_gbr_stacked_model.pkl')
 
 @app.route('/')
 def home():
